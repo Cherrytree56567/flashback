@@ -1,0 +1,10 @@
+img {
+	image-rendering: pixelated;
+}
+
+body {
+	text-align: center;
+	font-family: "Andale Mono", monospace;
+	color: darkorchid;
+	background-color: midnightblue;
+}
