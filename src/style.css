@@ -1,0 +1,63 @@
+img {
+	image-rendering: pixelated;
+	display: block;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	text-align: center;
+	font-family: "Press Start 2P", system-ui;
+	font-weight: 400;
+	font-style: normal;
+	color: rgb(255, 0, 134);
+	margin: 0px;
+	background-size: 40px 40px;
+  	background-image: radial-gradient(circle, #ff0086 2px, rgba(0, 0, 0, 0) 2px);
+	background-color: #000000;
+}
+
+img.logo {
+	width: clamp(16px, 50vw, 960px);
+}
+
+.container  {
+	padding: clamp(1px, 4vw, 960px);
+	margin: 0 auto;
+	width: 50%;
+  	aspect-ratio: 16 / 9;
+}
+
+.outer-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+	font-size: clamp(8px, 2vw, 24px);
+}
+
+.tab {
+	top: 0;
+    position: fixed;
+    right: 10px;
+	border-bottom: 2px solid #ff0086;
+  border-left: 2px solid #ff0086;
+  border-right: 2px solid #ff0086;
+  
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+img.github {
+	padding: 10px;
+	cursor: pointer;
+}
