@@ -8,15 +8,29 @@ html, body {
 	width: 100%;
 }
 
+:root {
+  --bright-purple: rgb(144, 19, 254);
+  --bright-red: rgb(208, 2, 27);
+  --sky-blue: rgb(83, 169, 255);
+  --hot-pink: rgb(255, 0, 134);
+  --black: rgb(0, 0, 0);
+  --high-yellow: rgb(248, 231, 28);
+  --brightpurple: 144, 19, 254;
+  --brightred: 208, 2, 27;
+  --skyblue: 83, 169, 255;
+  --hotpink: 255, 0, 134;
+  --highyellow: 248, 231, 28;
+}
+
 body {
 	text-align: center;
 	font-family: "Press Start 2P", system-ui;
 	font-weight: 400;
 	font-style: normal;
-	color: rgb(255, 0, 134);
+	color: var(--hot-pink);
 	margin: 0px;
 	background-size: 40px 40px;
-  	background-image: radial-gradient(circle, #ff0086 2px, rgba(0, 0, 0, 0) 2px);
+  	background-image: radial-gradient(circle, var(--hot-pink) 2px, var(--black) 2px);
 	background-color: #000000;
 }
 
@@ -29,6 +43,12 @@ img.logo {
 	margin: 0 auto;
 	width: 50%;
   	aspect-ratio: 16 / 9;
+	display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .outer-container {
@@ -49,15 +69,54 @@ p {
 	top: 0;
     position: fixed;
     right: 10px;
-	border-bottom: 2px solid #ff0086;
-  border-left: 2px solid #ff0086;
-  border-right: 2px solid #ff0086;
+	border-bottom: 2px solid var(--hot-pink);
+  	border-left: 2px solid var(--hot-pink);
+  	border-right: 2px solid var(--hot-pink);
   
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  	border-bottom-left-radius: 10px;
+  	border-bottom-right-radius: 10px;
 }
 
 img.github {
 	padding: 10px;
 	cursor: pointer;
+}
+
+button {
+	font-family: inherit;
+	padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 5px solid var(--sky-blue);
+    border-radius: 12px;
+    background-color: white;
+    color: var(--sky-blue);
+	font-variant: all-petite-caps;
+    font-size: clamp(16px, 1vw, 960px);
+	-webkit-box-shadow: 0px 0px 10px 10px rgba(var(--skyblue), 0.3);
+	-moz-box-shadow: 0px 0px 10px 10px rgba(var(--skyblue), 0.3);
+	box-shadow: 0px 0px 10px 10px rgba(var(--skyblue), 0.3);
+	cursor: pointer;
+}
+
+.second-container {
+	height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.you-ship {
+	margin-right: 50px;
+}
+
+.we-ship {
+	margin-left: 50px;
+}
+
+.ys-icon {
+    width: clamp(16px, 30vw, 960px);
 }
